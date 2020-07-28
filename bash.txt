@@ -1,0 +1,59 @@
+cat /etc/shells -----> to know the which shell supports
+which bash ----> know that which bash supports
+===========================================================
+#! /bin/bash
+echo "hello world"
+=================
+comments and varibles
+#! /bin/bash
+# this the comments
+echo "hello world"
+------------------
+#! /bin/bash
+VAR=RAJU
+echo "hi this is $VAR"
+================================
+read inputs from terminals
+#! /bin/bash
+echo "enter the name: "
+read name
+echo "name is: $name"
+-----------------
+input/read the value on the same line
+read -p "name:" name1 name2
+echo names are $name1 $name2 
+-----------------
+to enter the secret password and name
+read -p "name:" name
+read -sp "password": password
+echo 
+echo name is $name
+echo password is $passwoed
+------------------
+enter the names in array
+echo "enter names:"
+read -a names
+echo names are: ${names[0]}, ${names[1]}
+------------------
+echo "enter names:"
+read 
+echo names are: $REPLY
+================================
+arguments in bash
+#! /bin/bash
+echo $1 $2 $3 '> echo $1 $2 $3'
+args={"$@"}
+# echo ${args[1]} ${args[2]} ${args[3]} 
+echo $@
+echo $# ----> to know the number of args
+================================
+#! /bin/bash
+count=10
+if (( $count > 11 ))
+ then
+   echo "condition is true"
+elif (( $count < 11 ))
+then
+  echo "condition is fail"
+fi
+================================
