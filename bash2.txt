@@ -1,0 +1,107 @@
+===========================================
+AND & OR operation
+#! /bin/bash
+age=23
+if [[ $age -gt 18 && $age -lt 30 ]]
+# if [ $age -gt 18 -a $age -lt 30 ] ------------> to use one bracket
+if [[ $age -gt 18 || $age -lt 30 ]]
+# if [ $age -gt 18 -o $age -lt 30 ] ------------> to use one bracket
+then
+  echo "age is validate"
+else
+  echo "the age is in validate"
+fi
+===========================================
+basic arthematic
+#! /bin/bash
+num1=50
+num2=5
+echo $(( num1+num2 ))
+echo $(( num1-num2 ))
+echo $(( num1*num2 ))
+echo $(( num1/num2 ))
+echo $(( num1%num2 ))
+-------------------------
+### this is for decimal
+echo "$num1+$num2" | bc
+echo "$num1-$num2" | bc
+echo "$num1*$num2" | bc
+echo "scale=2;$num1/$num2" | bc
+echo "$num1%$num2" | bc
+num=9
+echo "scale=2;sqrt($num)" | bc -l
+===================================
+case statement syntax
+case expression in
+  pattern1 )
+    statement ;;
+  pattern2 )
+    statement ;;
+  ....
+esac
+---------------------
+#! /bin/bash
+vehicle=$2
+case $vehicle in
+  car)
+    echo "this a car";;
+  van)
+    echo "this a van";;
+esac
+---------------------
+#! /bin/bash
+echo -e "enter the letter/number: \c"
+read	
+case
+  raju)
+    echo "Hi $REPLY" ;;
+  akhi)
+    echo "Hi $REPLY" ;;
+  "akhi raju")
+    echo "Hi $REPLY" ;;
+esac
+-----------------------
+array variables
+#! /bin/bash
+os=( 'ubutnu' 'centos' 'kali' )
+echo "${os[@]}"
+echo "${!os[@]}"
+======================================
+while in bash
+#! /bin/bash
+n=1
+while [ $n -lt 10 ]
+do 
+  echo "$n"
+  (( n++ ))
+done
+--------------------------------------
+read a file contant
+while
+do
+
+done
+======================================
+#! /bin/bash
+untill [ $n -ge	 10 ]
+do
+  echo "$n"
+  (( n++ ))
+done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

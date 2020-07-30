@@ -57,3 +57,31 @@ then
   echo "condition is fail"
 fi
 ================================
+file test operations
+#! /bin/bash
+echo -e "filename: \c"
+read
+if [ -f $REPLY ]
+# if [ -s $REPLY ] --------> -s is to know that file is empty or not
+# if [ -r $REPLY ] --------> -s is to know that file is readable or not
+# if [ -w $REPLY ] --------> -s is to know that file is writeable or not
+then
+  echo "$REPLY found"
+else
+  echo "$REPLY not found"
+fi 
+==========================================
+#! /bin/bash
+echo -e "enter the file name: \c"
+read
+if [ -f $REPLY ]
+then
+  if [ -r $REPLY ]
+  then
+    echo "$REPLY is readable"
+  else
+    echo "$REPLY is notreadable"
+  fi
+else
+  echo "$REPLY is not found"
+fi
